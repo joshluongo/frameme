@@ -1,0 +1,15 @@
+name: Unit Tests
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  Test:
+    runs-on:
+      - macos-latest
+    steps:
+    - uses: actions/checkout@v3.5.0
+    - name: Run Tests
+      shell: bash
+      run: make test

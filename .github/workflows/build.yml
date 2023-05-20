@@ -1,0 +1,28 @@
+name: Test and Build
+on:
+  workflow_dispatch:
+
+jobs:
+  Test:
+    runs-on:
+      - macos-latest
+    steps:
+    - uses: actions/checkout@v3.5.0
+    - name: Run Tests
+      shell: bash
+      run: make test
+
+  Build:
+    runs-on:
+      - macos-latest
+    needs:
+      - Test
+    steps:
+    - uses: actions/checkout@v3.5.0
+    - name: Build
+      shell: bash
+      run: make build_here
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        path: frameme
