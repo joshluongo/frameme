@@ -19,6 +19,9 @@ struct FrameMe: ParsableCommand {
     @Flag(help: "Don't clip the screenshot to the frame.")
     var noClip = false
 
+    @Flag(help: "Force framing of file/s. By default files ending with '_framed' are skipped.")
+    var force = false
+    
     @Option(help: "The output folder. By default framed screenshots are placed in the their original folder.")
     var output: String?
 
@@ -54,6 +57,14 @@ struct FrameMe: ParsableCommand {
 
                 Logger.general("> Processing <\(file.path)>")
 
+                // Check if this file is framed screenshot.
+                if file.deletingPathExtension().lastPathComponent.hasSuffix("_framed") {
+                    if !force {
+                        Logger.warning("! Looks like this file is a framed screenshot <\(file.path)>, skipping...")
+                        continue;
+                    }
+                }
+                
                 // Get the filename.
                 let outputFilename = "\(file.deletingPathExtension().lastPathComponent)_framed.png"
 

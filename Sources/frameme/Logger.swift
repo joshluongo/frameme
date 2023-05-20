@@ -20,14 +20,21 @@ class Logger {
     ///
     /// - Parameter output: String to output
     static func error(_ output: String) {
-        print(output.ansiBoldRed)
+        print(output.ansiRed)
     }
 
     /// Output (or log) a successful output.
     ///
     /// - Parameter output: String to output
     static func success(_ output: String) {
-        print(output.ansiBoldGreen)
+        print(output.ansiGreen)
+    }
+
+    /// Output (or log) a successful output.
+    ///
+    /// - Parameter output: String to output
+    static func warning(_ output: String) {
+        print(output.ansiYellow)
     }
 
 }

@@ -11,9 +11,7 @@ private struct Colours {
     static let reset = "\u{001B}[0;0m"
     static let red = "\u{001B}[0;31m"
     static let green = "\u{001B}[0;32m"
-
-    static let redBold = "\u{001B}[1;31m"
-    static let greenBold = "\u{001B}[1;32m"
+    static let yellow = "\u{001B}[0;33m"
 }
 
 extension String {
@@ -28,14 +26,9 @@ extension String {
         return Colours.green + self + Colours.reset
     }
 
-    /// Convert this to a red bold ansi string
-    var ansiBoldRed: String {
-        return Colours.redBold + self + Colours.reset
+    /// Convert this to a yellow ansi string
+    var ansiYellow: String {
+        return Colours.yellow + self + Colours.reset
     }
-
-    /// Convert this to a green bold ansi string
-    var ansiBoldGreen: String {
-        return Colours.greenBold + self + Colours.reset
-    }
-
+    
 }
