@@ -1,6 +1,14 @@
-# FrameMe
+<p style="text-align:center"><img src=".github/artwork/logo.svg" height="70"/></p>
 
-Quickly frame iOS screenshots, this is designed to use frames from https://developer.apple.com/design/resources/#product-bezels . This also works with Android, TV, Apple Watch or most other devices frames.
+Quickly frame screenshots, this is designed to use iOS frames from https://developer.apple.com/design/resources/#product-bezels . This also works with Android, TV, Apple Watch or most other devices frames.
+
+## Examples
+
+| Frame | Screenshot | Output |
+|---|---|---|
+| <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-frame.png" width="120"/>](.github/artwork/meta-iphone14pro-frame.png)</p> | <p style="text-align:center">[<img src=".github/artwork/iphone14pro.png" width="120"/>](.github/artwork/iphone14pro.png.png)</p> | <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-frame_framed.png" width="120"/>](.github/artwork/meta-iphone14pro-frame_framed.png)</p> |
+| <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-text-frame.png" width="120"/>](.github/artwork/meta-iphone14pro-text-frame.png)</p> | <p style="text-align:center">[<img src=".github/artwork/iphone14pro.png" width="120"/>](.github/artwork/iphone14pro.png.png)</p> | <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-frame_framed.png" width="120"/>](.github/artwork/meta-iphone14pro-frame_framed.png)</p> | <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-text-frame_framed.png" width="120"/>](.github/artwork/meta-iphone14pro-text-frame_framed.png)</p> |
+| [<img src=".github/artwork/meta-iphone14pro-land-frame.png" height="120"/>](.github/artwork/meta-iphone14pro-land-frame.png) | <p style="text-align:center">[<img src=".github/artwork/iphone14pro-map.png" height="120"/>](.github/artwork/iphone14pro-map.png)</p> | <p style="text-align:center">[<img src=".github/artwork/meta-iphone14pro-land-frame_framed.png" width="120"/>](.github/artwork/meta-iphone14pro-land-frame_framed.png)</p> |
 
 ## Why?
 
@@ -19,7 +27,7 @@ Given this uses CoreGraphics it is lightning fast compared to frameit.
 ## Usage
 
 ```
-USAGE: frame-me [--skip-content-box] [--no-clip] [--output <output>] <frame> <screenshot> ...
+USAGE: frameme [--skip-content-box] [--no-clip] [--output <output>] <frame> <screenshot> ...
 
 ARGUMENTS:
   <frame>                 The frame to use.
@@ -33,11 +41,12 @@ OPTIONS:
                           placed in the their original folder.
   -h, --help              Show help information.
 ```
-
-## Example
+### Example Coammnd
 
 `frameme ~/frames/iPhone\ 14\ Pro\ -\ Space\ Black\ -\ Portrait.png *.png`
 
 ## License
 
 GNU General Public License v3.0
+
+Example device frames from Meta - https://design.facebook.com/toolsandresources/devices/
