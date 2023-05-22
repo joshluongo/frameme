@@ -24,6 +24,12 @@ After which it writes the framed image to the source folder with the suffix `_fr
 
 Given this uses CoreGraphics it is lightning fast compared to frameit.
 
+## Installation
+
+Download the [latest release](https://github.com/joshluongo/frameme/releases/latest), the provided binary is universal meaning that it supports both Intel and Apple Silicon natively. Put the binary somewhere in your **$PATH**, usually `/usr/local/bin/`.
+
+Eventually I'll add this to Homebrew.
+
 ## Usage
 
 ```
@@ -41,7 +47,7 @@ OPTIONS:
                           placed in the their original folder.
   -h, --help              Show help information.
 ```
-### Example Coammnd
+### Example Command
 
 `frameme ~/frames/iPhone\ 14\ Pro\ -\ Space\ Black\ -\ Portrait.png *.png`
 
