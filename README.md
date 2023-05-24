@@ -33,7 +33,9 @@ Eventually I'll add this to Homebrew.
 ## Usage
 
 ```
-USAGE: frameme [--skip-content-box] [--no-clip] [--output <output>] <frame> <screenshot> ...
+OVERVIEW: Quickly frame screenshots.
+
+USAGE: frameme [--skip-content-box] [--no-clip] [--force] [--output <output>] <frame> <screenshot> ...
 
 ARGUMENTS:
   <frame>                 The frame to use.

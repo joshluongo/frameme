@@ -13,6 +13,13 @@ import ObjectiveC
 @main
 struct FrameMe: ParsableCommand {
 
+    /// Command configuration.
+    static var configuration = CommandConfiguration(
+        commandName: "frameme",
+        abstract: "Quickly frame screenshots.",
+        version: "1.0.2"
+    )
+
     @Flag(help: "Don't try and find the content box, just overlay the frame on the screenshot.")
     var skipContentBox = false
 
@@ -21,7 +28,7 @@ struct FrameMe: ParsableCommand {
 
     @Flag(help: "Force framing of file/s. By default files ending with '_framed' are skipped.")
     var force = false
-    
+
     @Option(help: "The output folder. By default framed screenshots are placed in the their original folder.")
     var output: String?
 
@@ -61,10 +68,10 @@ struct FrameMe: ParsableCommand {
                 if file.deletingPathExtension().lastPathComponent.hasSuffix("_framed") {
                     if !force {
                         Logger.warning("! Looks like this file is a framed screenshot <\(file.path)>, skipping...")
-                        continue;
+                        continue
                     }
                 }
-                
+
                 // Get the filename.
                 let outputFilename = "\(file.deletingPathExtension().lastPathComponent)_framed.png"
 

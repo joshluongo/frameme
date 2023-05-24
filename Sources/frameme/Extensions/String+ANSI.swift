@@ -30,5 +30,5 @@ extension String {
     var ansiYellow: String {
         return Colours.yellow + self + Colours.reset
     }
-    
+
 }
