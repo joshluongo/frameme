@@ -47,6 +47,7 @@ OPTIONS:
   --force                 Force framing of file/s. By default files ending with '_framed' are skipped.
   --output <output>       The output folder. By default framed screenshots are
                           placed in the their original folder.
+  --version               Show the version.
   -h, --help              Show help information.
 ```
 ### Example Command
