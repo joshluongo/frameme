@@ -1,6 +1,6 @@
 //
 //  CompositeImage.swift
-//  FrameMe
+//  FrameKit
 //
 //  Created by Josh Luongo on 13/12/2022.
 //
@@ -10,13 +10,18 @@ import CoreImage
 import ImageIO
 import CoreGraphics
 
-class CompositeImage {
+public class CompositeImage {
 
     /// Don't do content box finding for screenshot positioning.
-    var skipContentBox = false
+    public var skipContentBox = false
 
     /// Don't clip the screenshot to the device frame.
-    var noClip = false
+    public var noClip = false
+
+    public init(skipContentBox: Bool = false, noClip: Bool = false) {
+        self.skipContentBox = skipContentBox
+        self.noClip = noClip
+    }
 
     /// Create a composite image from a frame and a screenshot.
     ///
@@ -24,7 +29,7 @@ class CompositeImage {
     ///   - frame: Device Frame
     ///   - screenshot: Screenshot
     /// - Returns: Composited Result
-    func create(frame: CGImage, screenshot: CGImage) -> CGImage? {
+    public func create(frame: CGImage, screenshot: CGImage) -> CGImage? {
         // Start a context
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)

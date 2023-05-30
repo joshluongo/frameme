@@ -9,6 +9,7 @@ import Foundation
 import CoreImage
 import ArgumentParser
 import ObjectiveC
+import FrameKit
 
 @main
 struct FrameMe: ParsableCommand {

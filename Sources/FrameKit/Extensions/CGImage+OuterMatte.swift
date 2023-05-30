@@ -1,6 +1,6 @@
 //
 //  CGImage+OuterMatte.swift
-//  FrameMe
+//  FrameKit
 //
 //  Created by Josh Luongo on 13/12/2022.
 //

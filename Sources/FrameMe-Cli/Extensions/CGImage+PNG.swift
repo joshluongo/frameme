@@ -10,7 +10,7 @@ import CoreImage
 import ImageIO
 import CoreGraphics
 
-extension CGImage {
+public extension CGImage {
 
     /// Write this CGImage as a PNG file.
     ///

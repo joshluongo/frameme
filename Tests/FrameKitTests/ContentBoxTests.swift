@@ -1,5 +1,12 @@
+//
+//  ContentBoxTests.swift
+//  FrameMeTests
+//
+//  Created by Josh Luongo on 13/12/2022.
+//
+
 import XCTest
-@testable import frameme
+import FrameKit
 
 final class ContentBoxTests: XCTestCase {
 
